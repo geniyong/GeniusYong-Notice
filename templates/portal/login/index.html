@@ -1,0 +1,60 @@
+{% extends 'portal/base/base.html' %}
+{% load static %}
+{% load range %}
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portal/css/login.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="login-sub-nav">
+        <div class="container-xl p-0 login-sub-nav-inwrap" style="height: 100%">
+            <div class="home_btn"></div>
+            <a href="{% url 'portal:login' %}?next=/" class='sub-nav-menu active'>로그인<i></i></a>
+
+            <a href="{% url 'portal:login' %}?next=/" class='sub-nav-menu'>아이디·비밀번호 찾기<i></i></a>
+
+            <a href="{% url 'portal:login' %}?next=/" class='sub-nav-menu'>회원가입</a>
+        </div>
+    </div>
+    <div class="content-wrap">
+        <div class="container-xl p-0">
+            <form method="post">
+                {% csrf_token %}
+                <div class="login-box row m-0">
+                    <div class="col-md p-0">
+                        <div style="display: flex;">
+                            <div style="width: 100%;">
+                                <p class="m-0">
+                                    {{ form.username }}
+                                </p>
+                                <p class="m-0">
+                                    {{ form.password }}
+                                </p>
+                            </div>
+                            <div style="flex-shrink: 0; margin-left: 20px">
+                                <button type="submit" class="login-submit-btn">로그인</button>
+                            </div>
+                        </div>
+                        <div style="border-top:1px solid #dddddd; margin-top:20px; padding-top:20px;">
+                            <button class="login-as-btn">아이디/비밀번호 찾기</button>
+                            <button class="login-as-btn">회원가입 하기</button>
+                        </div>
+                    </div>
+                    <div class="col-md p-0" style="display: flex; align-items: center; justify-content: center">
+                        <img src="{% static 'portal/image/login_page/login_bg_2.png' %}">
+                    </div>
+                </div>
+            </form>
+            <a href="#none">
+                <img src="{% static 'portal/image/login_page/login_bottom_long.jpg' %}" class="login_bottom_banner long">
+            </a>
+            <div style="display: flex; padding-bottom:24px;">
+                <a href="#none">
+                    <img src="{% static 'portal/image/login_page/login_bottom_short_1.jpg' %}" class="login_bottom_banner short">
+                </a>
+                <a href="#none">
+                    <img src="{% static 'portal/image/login_page/login_bottom_short_2.jpg' %}" class="login_bottom_banner short">
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

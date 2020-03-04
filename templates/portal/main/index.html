@@ -1,0 +1,16 @@
+{% extends 'portal/base/base.html' %}
+{% load static %}
+{% load range %}
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portal/css/main.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="container-xl" style="padding: 10px 0; height: 100%">
+        <div class="content-wrap">
+            <p style="font-size:2.5rem"> Crawler </p>
+            <button class="btn btn-primary">
+                SLR site crawler run
+            </button>
+        </div>
+    </div>
+{% endblock %}

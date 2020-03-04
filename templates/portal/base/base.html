@@ -1,0 +1,13 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block extra_base_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portal/css/portal_base.css' %}">
+{% endblock %}
+{% block container %}
+    {% include './header.html' %}
+    {% include './footer.html' %}
+    <div class="portal-wrapper">
+        {% block content %} {% endblock %}
+    </div>
+
+{% endblock %}

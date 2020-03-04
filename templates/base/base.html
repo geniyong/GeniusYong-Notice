@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% if title %} {{ title }} {% else %} GeniusYong Notice {% endif %}</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'base/image/favicon/apple-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'base/image/favicon/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'base/image/favicon/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'base/image/favicon/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'base/image/favicon/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'base/image/favicon/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'base/image/favicon/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'base/image/favicon/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'base/image/favicon/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static 'base/image/favicon/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'base/image/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'base/image/favicon/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'base/image/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'base/image/favicon/manifest.json' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{% static 'base/image/favicon/ms-icon-144x144.png' %}">
+    <meta name="theme-color" content="#ffffff">
+    {# Global stylesheets #}
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap-4.4.1-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'base/fonts/NotoSansKR-Hestia.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'base/css/base.css' %}">
+
+    {% block extra_base_css %}
+        {# Override this in templates to add extra stylesheets #}
+    {% endblock %}
+    {% block extra_css %}
+        {# Override this in templates to add extra stylesheets #}
+    {% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    {% block container %}
+
+    {% endblock %}
+
+    {# Global javascript #}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static 'bootstrap-4.4.1-dist/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

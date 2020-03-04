@@ -1,0 +1,32 @@
+body {
+    font-family: Noto Sans Korean, serif !important;
+    font-weight: 400;
+    min-height: 100%;
+    color: #161920;
+}
+html{
+    min-height: 100%;
+    position: relative;
+}
+a{
+    color: #161920;
+}
+a:hover {
+    cursor: pointer !important;
+    color: #f05c1d !important;
+    text-decoration: none !important;
+    opacity: 0.9;
+}
+input::placeholder{
+    color:#bebebe;
+    font-weight: 300;
+}
+
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1200px;
+    }
+}
+ol, ul, li, dd, dl, dt {
+    list-style: none;
+}
