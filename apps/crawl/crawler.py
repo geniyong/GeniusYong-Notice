@@ -20,6 +20,8 @@ from apps.shared.utils import headers, get_cleaned_text
 # ---------------------------------
 # from apps.crawl.crawler import *
 # ---------------------------------
+from geniusYong_notice.conf.utils import get_private_info_value
+
 
 def slr():
     name = 'SLR'
@@ -63,6 +65,7 @@ def init_chrome_driver():
     return driver
 
 
+get_private_info_value()
 driver = init_chrome_driver()  # 셀레니움 크롬 드라이버 실행
 site_url = 'http://www.slrclub.com'
 driver.get(site_url)

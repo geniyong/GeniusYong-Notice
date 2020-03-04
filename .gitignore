@@ -1,7 +1,7 @@
 ### MY GITIGNORE ##
-project/conf/secret_key_gen.py
-project/conf/server_info.json
-project/conf/private_info.json
+geniusYong_notice/conf/secret_key_gen.py
+geniusYong_notice/conf/server_info.json
+geniusYong_notice/conf/private_info.json
 
 ### Django ###
 *.log
