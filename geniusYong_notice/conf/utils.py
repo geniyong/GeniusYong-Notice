@@ -3,7 +3,7 @@ import json
 
 def get_server_info_value(key: str):
 
-    with open('project/conf/server_info.json', mode='rt', encoding='utf-8') as file:
+    with open('geniusYong_notice/conf/server_info.json', mode='rt', encoding='utf-8') as file:
         data = json.load(file)
         for k, v in data.items():
             if k == key:
@@ -13,7 +13,7 @@ def get_server_info_value(key: str):
 
 def get_private_info_value(key: str):
 
-    with open('project/conf/private_info.json', mode='rt', encoding='utf-8') as file:
+    with open('geniusYong_notice/conf/private_info.json', mode='rt', encoding='utf-8') as file:
         data = json.load(file)
         for k, v in data.items():
             if k == key:

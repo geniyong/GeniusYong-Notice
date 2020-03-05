@@ -1,0 +1,15 @@
+{
+    "production (KEY of env)" : {
+        "SECRET_KEY" : "SECRET_KEY VALUE",
+        "DATABASES" : {
+            "default": {
+                "ENGINE": "DB DRIVER",
+                "NAME": "DB Name",
+                "USER": "DB Username",
+                "PASSWORD": "DB Password",
+                "HOST": "DB Host Addr",
+                "PORT": "DB Port Num"
+            }
+        }
+    }
+}

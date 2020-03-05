@@ -3,6 +3,9 @@
 {% block extra_base_css %}
     <link rel="stylesheet" type="text/css" href="{% static 'portal/css/portal_base.css' %}">
 {% endblock %}
+{% block extra_base_js %}
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+{% endblock %}
 {% block container %}
     {% include './header.html' %}
     {% include './footer.html' %}
